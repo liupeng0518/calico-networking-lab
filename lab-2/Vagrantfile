@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     #
 
     config.vm.define("spine1") do |spine1|
-        spine1.vm.box = "cumulusvx41"
+        spine1.vm.box = "CumulusCommunity/cumulus-vx"
         #spine1.vm.box_version = "4.1.0"
   
         spine1.vm.network "private_network", virtualbox__intnet: "spine1_leaf1", cumulus__intname: 'swp1', auto_config: false
@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define("spine2") do |spine2|
-        spine2.vm.box = "cumulusvx41"
+        spine2.vm.box = "CumulusCommunity/cumulus-vx"
         #spine2.vm.box_version = "4.1.0"
   
         spine2.vm.network "private_network", virtualbox__intnet: "spine2_leaf1", cumulus__intname: 'swp1', auto_config: false
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define("leaf1") do |leaf1|
-        leaf1.vm.box = "cumulusvx41"
+        leaf1.vm.box = "CumulusCommunity/cumulus-vx"
         #leaf1.vm.box_version = "4.1.0"
   
         leaf1.vm.network "private_network", virtualbox__intnet: "spine1_leaf1", cumulus__intname: 'swp1', auto_config: false
@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define("leaf2") do |leaf2|
-        leaf2.vm.box = "cumulusvx41"
+        leaf2.vm.box = "CumulusCommunity/cumulus-vx"
         #leaf2.vm.box_version = "4.1.0"
   
         leaf2.vm.network "private_network", virtualbox__intnet: "spine1_leaf2", cumulus__intname: 'swp1', auto_config: false
@@ -62,7 +62,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define("leaf3") do |leaf3|
-        leaf3.vm.box = "cumulusvx41"
+        leaf3.vm.box = "CumulusCommunity/cumulus-vx"
         #leaf3.vm.box_version = "4.1.0"
   
         leaf3.vm.network "private_network", virtualbox__intnet: "spine1_leaf3", cumulus__intname: 'swp1', auto_config: false
